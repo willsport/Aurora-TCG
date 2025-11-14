@@ -108,4 +108,757 @@
 
     .brand-text span:last-child {
       font-size: 0.78rem;
-      color
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--text);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      transition: width 0.18s ease-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .btn-nav {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(62, 197, 255, 0.5);
+      background: radial-gradient(circle at 0 0, rgba(62,197,255,0.4), transparent 55%);
+      color: var(--text);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-nav:hover {
+      border-color: var(--accent-2);
+      transform: translateY(-1px);
+    }
+
+    .nav-burger {
+      display: none;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 999px;
+      padding: 6px 10px;
+      cursor: pointer;
+      background: rgba(10, 14, 30, 0.7);
+    }
+
+    .nav-burger span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: var(--text);
+      margin: 3px 0;
+      border-radius: 99px;
+    }
+
+    @media (max-width: 720px) {
+      .nav-links,
+      .btn-nav {
+        display: none;
+      }
+      .nav-burger {
+        display: block;
+      }
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+      gap: 28px;
+      padding-top: 26px;
+      padding-bottom: 40px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 2.95vw + 1.6rem, 3rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 18px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .tag-pill {
+      border-radius: 999px;
+      border: 1px solid rgba(62, 197, 255, 0.4);
+      padding: 4px 11px;
+      font-size: 0.76rem;
+      color: var(--muted);
+      background: rgba(10, 18, 40, 0.7);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #050816;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      border-color: rgba(164, 172, 199, 0.5);
+      color: var(--muted);
+      background: rgba(9,14,30,0.8);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--text);
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-note strong {
+      color: var(--success);
+    }
+
+    .hero-right {
+      position: relative;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at 0 0, rgba(62,197,255,0.25), transparent 60%), var(--card);
+      border-radius: 24px;
+      padding: 18px 18px 20px;
+      border: 1px solid rgba(62, 197, 255, 0.28);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .hero-card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-chip {
+      font-size: 0.75rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(75,216,151,0.08);
+      color: var(--success);
+      border: 1px solid rgba(75,216,151,0.4);
+    }
+
+    .hero-product {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .hero-product-thumb {
+      width: 88px;
+      height: 88px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      text-align: center;
+      padding: 6px;
+      color: #050816;
+      font-weight: 600;
+    }
+
+    .hero-product-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .hero-product-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-product-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-product-price {
+      font-size: 0.88rem;
+      margin-top: 4px;
+    }
+
+    .hero-product-price span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .hero-pills span {
+      font-size: 0.75rem;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(35, 43, 72, 0.9);
+      background: rgba(6,10,26,0.95);
+      color: var(--muted);
+    }
+
+    .hero-card-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-card-foot strong {
+      color: var(--accent);
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: minmax(0,1fr);
+      }
+      .hero-right {
+        order: -1;
+      }
+    }
+
+    /* SECTIONS */
+    section {
+      margin-bottom: 38px;
+    }
+
+    .section-heading {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    /* GRID CARDS */
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+    @media (min-width: 720px) {
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+      }
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 14px 14px 16px;
+      border: 1px solid var(--border);
+    }
+
+    .card h3 {
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 6px 0 4px;
+    }
+
+    .pill-row span {
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(13,20,42,0.9);
+      color: var(--muted);
+    }
+
+    .price-line {
+      margin-top: 6px;
+      font-size: 0.84rem;
+    }
+
+    .price-line strong {
+      color: var(--accent);
+    }
+
+    /* POLICIES & FOOTER */
+    .policies {
+      display: grid;
+      gap: 16px;
+    }
+    @media (min-width: 720px) {
+      .policies {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+      }
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 16px;
+    }
+    @media (min-width: 720px) {
+      .contact-grid {
+        grid-template-columns: 2fr 3fr;
+      }
+    }
+
+    .contact-list {
+      font-size: 0.88rem;
+      color: var(--muted);
+      list-style: none;
+    }
+
+    .contact-list li {
+      margin-bottom: 6px;
+    }
+
+    .newsletter {
+      background: radial-gradient(circle at 0 0, rgba(255,79,216,0.2), transparent 60%), var(--card);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 79, 216, 0.35);
+      padding: 14px 14px 16px;
+    }
+
+    .newsletter h3 {
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+    }
+
+    .newsletter p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .newsletter-form input[type="email"] {
+      flex: 1 1 160px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(164,172,199,0.6);
+      background: rgba(7,10,24,0.95);
+      color: var(--text);
+      font-size: 0.85rem;
+    }
+
+    .newsletter-form button {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #050816;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(38, 47, 79, 0.9);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    footer a {
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <div class="nav-left">
+      <div class="nav-logo">
+        <img src="/images/aurora-logo.png" alt="Aurora TCG Australia logo" />
+      </div>
+      <div class="brand-text">
+        <span>AURORA TCG</span>
+        <span>Trading Card Game Store • Australia</span>
+      </div>
+    </div>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <a href="#preorders">Preorders</a>
+      <a href="#about">About</a>
+      <a href="#policies">Policies</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="btn-nav" onclick="document.getElementById('preorders').scrollIntoView({behavior:'smooth'})">
+      View Latest Preorders
+    </button>
+    <button class="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <div>
+      <div class="hero-eyebrow">Australian Trading Card Store</div>
+      <h1>
+        Sealed product for <span>collectors, players & investors</span>.
+      </h1>
+      <p class="hero-subtitle">
+        Aurora TCG Australia specialises in Pokémon TCG sealed product – booster boxes, ETBs, tins and accessories – shipped with care from Queensland to collectors across the country.
+      </p>
+      <div class="hero-tags">
+        <span class="tag-pill">Authorised distributor sourced</span>
+        <span class="tag-pill">Preorders tied to allocations</span>
+        <span class="tag-pill">Secure tracked shipping</span>
+      </div>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">
+          Browse Products
+        </button>
+        <button class="btn-ghost" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+          Learn more about us
+        </button>
+      </div>
+      <p class="hero-note">
+        <strong>Retail & allocation ready:</strong> all stock is held locally, with clear preorder and refund policies to support customers and suppliers.
+      </p>
+    </div>
+
+    <div class="hero-right">
+      <aside class="hero-card" aria-label="Featured preorder">
+        <div class="hero-card-header">
+          <div>
+            <div class="hero-card-title">Featured Preorder</div>
+            <div style="font-size:0.78rem;color:var(--muted);">Limited allocation – first in, best dressed.</div>
+          </div>
+          <span class="hero-chip">Preorder Open</span>
+        </div>
+
+        <div class="hero-product">
+          <div class="hero-product-thumb">
+            Phantasmal Flames<br />Booster Box
+          </div>
+          <div class="hero-product-body">
+            <div class="hero-product-name">Pokémon TCG: Mega Evolution – Phantasmal Flames (EN)</div>
+            <div class="hero-product-meta">36 booster packs • 6 boxes per case • Sealed from distributor.</div>
+            <div class="hero-product-price">
+              Expected retail: <span>$450 / box</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-pills">
+          <span>Case preorders available</span>
+          <span>Ships release week</span>
+          <span>Allocation-backed</span>
+        </div>
+
+        <div class="hero-card-foot">
+          <div>Deposit option for case orders available on request.</div>
+          <div><strong>QLD based</strong> • AU-wide shipping</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="shop">
+    <h2 class="section-heading">Shop Categories</h2>
+    <p class="section-subtitle">
+      As we grow our allocations, Aurora TCG will carry a full range of sealed product and accessories for collectors, families and competitive players.
+    </p>
+    <div class="grid grid-3">
+      <article class="card">
+        <h3>Pokémon Booster Boxes</h3>
+        <div class="pill-row">
+          <span>Main sets</span><span>Special sets</span><span>Cases (6 boxes)</span>
+        </div>
+        <p>
+          Sealed boxes sourced from authorised distributors only. Ideal for long-term sealed collectors, group breaks or bulk openings.
+        </p>
+        <p class="price-line"><strong>Target price:</strong> $450 / box (set dependent)</p>
+      </article>
+
+      <article class="card">
+        <h3>Elite Trainer Boxes & Bundles</h3>
+        <div class="pill-row">
+          <span>ETBs</span><span>Premium collections</span><span>Gift bundles</span>
+        </div>
+        <p>
+          ETBs and premium boxes for players who want sleeves, dice and accessories alongside their packs.
+        </p>
+        <p class="price-line"><strong>Target price:</strong> From $89 / ETB</p>
+      </article>
+
+      <article class="card">
+        <h3>Accessories & Supplies</h3>
+        <div class="pill-row">
+          <span>Sleeves</span><span>Toploaders</span><span>Binders</span>
+        </div>
+        <p>
+          Protection for graded and raw cards, plus storage solutions for growing collections and break inventory.
+        </p>
+        <p class="price-line"><strong>Coming soon:</strong> binders, storage boxes & deck boxes.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="preorders">
+    <h2 class="section-heading">Current & Upcoming Preorders</h2>
+    <p class="section-subtitle">
+      Preorders are always tied directly to confirmed distributor allocation. If allocation is reduced, customers are contacted and offered a refund or alternative.
+    </p>
+    <div class="grid grid-2">
+      <article class="card">
+        <h3>Phantasmal Flames – Booster Box</h3>
+        <div class="pill-row">
+          <span>EN • Sealed</span>
+          <span>36 packs</span>
+          <span>Release: Nov 2025</span>
+        </div>
+        <p>
+          Preorder for individual booster boxes. Ideal for collectors and players looking to secure product for release week.
+        </p>
+        <p class="price-line">
+          <strong>Price guide:</strong> $450 / box (subject to market and allocation).
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Phantasmal Flames – Case (6 Boxes)</h3>
+        <div class="pill-row">
+          <span>Case sealed</span>
+          <span>Best value</span>
+          <span>Allocation-limited</span>
+        </div>
+        <p>
+          For serious collectors, investors or retail partners. Full sealed case, shipped double-boxed with tracking and insurance.
+        </p>
+        <p class="price-line">
+          <strong>Expressions of interest:</strong> Contact us for case pricing and deposit options.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-heading">About Aurora TCG Australia</h2>
+    <p class="section-subtitle">
+      A Queensland-based hobby retailer focused on sealed product, long-term relationships and reliable fulfilment.
+    </p>
+    <div class="grid grid-2">
+      <article class="card">
+        <h3>Who we are</h3>
+        <p>
+          Aurora TCG Australia was created to bring high-quality trading card products to collectors, families and competitive players across the country.
+          Our focus is on sealed product – booster boxes, cases, ETBs and accessories – sourced through authorised distributors.
+        </p>
+        <p style="margin-top:8px;font-size:0.85rem;color:var(--muted);">
+          All orders are packed and shipped from Queensland with care to protect sealed box integrity for collectors and investors.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>How we operate</h3>
+        <p>
+          We commit to clear preorder communication, fast dispatch on in-stock items and transparent stock levels that reflect confirmed allocations.
+          As the business grows, Aurora TCG plans to support local events and community play, building a stable ecosystem for long-term TCG growth in Australia.
+        </p>
+        <p style="margin-top:8px;font-size:0.85rem;color:var(--muted);">
+          For distributors and partners, we maintain consistent ordering patterns, organised storage and professional fulfilment processes.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="policies">
+    <h2 class="section-heading">Key Store Policies</h2>
+    <p class="section-subtitle">
+      Clear policies give confidence to customers and suppliers. These can be expanded into full standalone pages if needed.
+    </p>
+    <div class="policies">
+      <article class="card">
+        <h3>Preorder Policy</h3>
+        <p>
+          Aurora TCG only accepts preorders for products we are confirmed to receive via authorised distributors.
+          All preorder quantities are tied to official allocations. If allocations change, impacted customers are contacted promptly and offered a refund or suitable alternative.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Shipping & Handling</h3>
+        <p>
+          Orders are typically dispatched within 1–2 business days of payment clearing. All shipments include tracking as standard.
+          Booster boxes and cases are shipped double-boxed with adequate padding to protect corners and factory seal.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Returns & Refunds</h3>
+        <p>
+          Sealed products must remain unopened to be eligible for change-of-mind returns.
+          Faulty or damaged-on-arrival items are handled in line with Australian Consumer Law. Customers should contact us within 7 days of delivery if there is an issue.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-heading">Contact & Wholesale Enquiries</h2>
+    <p class="section-subtitle">
+      For customer orders, case preorders or supplier enquiries, reach out using the details below.
+    </p>
+    <div class="contact-grid">
+      <div class="card">
+        <h3>Business Details</h3>
+        <ul class="contact-list">
+          <li><strong>Business name:</strong> Aurora TCG Australia</li>
+          <li><strong>Location:</strong> Queensland, Australia</li>
+          <li><strong>Email:</strong> <a href="mailto:hello@auroratcg.com.au">hello@auroratcg.com.au</a></li>
+          <li><strong>Phone:</strong> 04xx xxx xxx</li>
+          <li><strong>ABN:</strong> [Your ABN here]</li>
+        </ul>
+        <p style="margin-top:10px;font-size:0.85rem;color:var(--muted);">
+          Distributors and suppliers are welcome to contact us regarding ongoing ordering, allocations and promotional partnerships.
+        </p>
+      </div>
+
+      <div class="newsletter">
+        <h3>Stay in the loop</h3>
+        <p>
+          Join the Aurora TCG mailing list for early preorder windows, restock alerts and sealed case opportunities.
+        </p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing to Aurora TCG!');">
+          <input type="email" name="email" placeholder="you@example.com" required />
+          <button type="submit">Join mailing list</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>© <span id="year"></span> Aurora TCG Australia. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#policies">Policies</a>
+      <span>•</span>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+</main>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
