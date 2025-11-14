@@ -7,16 +7,16 @@
   <meta name="description" content="Aurora TCG Australia – Australian trading card game store specialising in Pokémon TCG sealed product, booster boxes, ETBs and accessories." />
   <style>
     :root {
-      --bg: #050816;
-      --bg-soft: #0b1020;
-      --accent: #3ec5ff;
-      --accent-2: #ff4fd8;
-      --text: #f5f7ff;
-      --muted: #a4acc7;
-      --card: #111729;
-      --border: #232a3f;
+      --bg: #f7f0ff;
+      --bg-soft: #fdf7ff;
+      --accent: #c34bff;
+      --accent-2: #ff6ad5;
+      --text: #26142f;
+      --muted: #786a8c;
+      --card: #ffffff;
+      --border: #e0d0ff;
       --danger: #ff5e7a;
-      --success: #4bd897;
+      --success: #2da66c;
       --radius-lg: 18px;
       --radius-sm: 10px;
     }
@@ -29,7 +29,8 @@
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #15223a 0, #050816 55%);
+      background:
+        radial-gradient(circle at top left, #ffe0ff 0, #f7f0ff 45%, #fef9ff 100%);
       color: var(--text);
       line-height: 1.6;
     }
@@ -56,8 +57,12 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(18px);
-      background: linear-gradient(to bottom, rgba(5, 8, 22, 0.96), rgba(5, 8, 22, 0.75));
-      border-bottom: 1px solid rgba(62, 197, 255, 0.18);
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.98),
+        rgba(255, 255, 255, 0.9)
+      );
+      border-bottom: 1px solid rgba(210, 184, 255, 0.7);
     }
 
     .nav-inner {
@@ -80,11 +85,12 @@
       width: 46px;
       height: 46px;
       border-radius: 50%;
-      background: radial-gradient(circle at 30% 20%, #3ec5ff, #ff4fd8);
+      background: radial-gradient(circle at 30% 20%, #ffb3ff, #c34bff);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      border: 1px solid rgba(195, 75, 255, 0.35);
     }
 
     .nav-logo img {
@@ -104,6 +110,7 @@
       letter-spacing: 0.05em;
       font-size: 0.92rem;
       text-transform: uppercase;
+      color: #3b134f;
     }
 
     .brand-text span:last-child {
@@ -147,8 +154,8 @@
     .btn-nav {
       padding: 8px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(62, 197, 255, 0.5);
-      background: radial-gradient(circle at 0 0, rgba(62,197,255,0.4), transparent 55%);
+      border: 1px solid rgba(195, 75, 255, 0.4);
+      background: radial-gradient(circle at 0 0, rgba(255, 209, 255, 0.9), #ffeafb);
       color: var(--text);
       font-size: 0.85rem;
       font-weight: 600;
@@ -163,18 +170,18 @@
 
     .nav-burger {
       display: none;
-      border: 1px solid rgba(255,255,255,0.14);
+      border: 1px solid rgba(157, 120, 191, 0.45);
       border-radius: 999px;
       padding: 6px 10px;
       cursor: pointer;
-      background: rgba(10, 14, 30, 0.7);
+      background: rgba(252, 243, 255, 0.9);
     }
 
     .nav-burger span {
       display: block;
       width: 18px;
       height: 2px;
-      background: var(--text);
+      background: #5d2f75;
       margin: 3px 0;
       border-radius: 99px;
     }
@@ -211,6 +218,7 @@
       font-size: clamp(2.1rem, 2.95vw + 1.6rem, 3rem);
       line-height: 1.1;
       margin-bottom: 12px;
+      color: #3b134f;
     }
 
     .hero h1 span {
@@ -235,11 +243,11 @@
 
     .tag-pill {
       border-radius: 999px;
-      border: 1px solid rgba(62, 197, 255, 0.4);
+      border: 1px solid rgba(211, 168, 255, 0.9);
       padding: 4px 11px;
       font-size: 0.76rem;
       color: var(--muted);
-      background: rgba(10, 18, 40, 0.7);
+      background: rgba(255, 247, 255, 0.9);
     }
 
     .hero-actions {
@@ -264,7 +272,7 @@
 
     .btn-primary {
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #050816;
+      color: #fff;
     }
 
     .btn-primary:hover {
@@ -273,9 +281,9 @@
     }
 
     .btn-ghost {
-      border-color: rgba(164, 172, 199, 0.5);
+      border-color: rgba(200, 164, 255, 0.9);
       color: var(--muted);
-      background: rgba(9,14,30,0.8);
+      background: rgba(255, 249, 255, 0.96);
     }
 
     .btn-ghost:hover {
@@ -294,14 +302,19 @@
 
     .hero-right {
       position: relative;
+      min-height: 260px;
     }
 
     .hero-card {
-      background: radial-gradient(circle at 0 0, rgba(62,197,255,0.25), transparent 60%), var(--card);
+      background:
+        radial-gradient(circle at 0 0, rgba(255, 204, 255, 0.6), transparent 60%),
+        var(--card);
       border-radius: 24px;
       padding: 18px 18px 20px;
-      border: 1px solid rgba(62, 197, 255, 0.28);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+      border: 1px solid rgba(207, 171, 255, 0.8);
+      box-shadow: 0 18px 45px rgba(162, 117, 200, 0.3);
+      position: relative;
+      z-index: 2;
     }
 
     .hero-card-header {
@@ -320,9 +333,9 @@
       font-size: 0.75rem;
       padding: 4px 9px;
       border-radius: 999px;
-      background: rgba(75,216,151,0.08);
+      background: rgba(45, 166, 108, 0.08);
       color: var(--success);
-      border: 1px solid rgba(75,216,151,0.4);
+      border: 1px solid rgba(45, 166, 108, 0.4);
     }
 
     .hero-product {
@@ -335,14 +348,14 @@
       width: 88px;
       height: 88px;
       border-radius: 14px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      background: linear-gradient(135deg, #ffd86d, #ff6ad5);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.72rem;
       text-align: center;
       padding: 6px;
-      color: #050816;
+      color: #42200b;
       font-weight: 600;
     }
 
@@ -356,6 +369,7 @@
     .hero-product-name {
       font-size: 0.9rem;
       font-weight: 600;
+      color: #3b134f;
     }
 
     .hero-product-meta {
@@ -384,8 +398,8 @@
       font-size: 0.75rem;
       padding: 3px 9px;
       border-radius: 999px;
-      border: 1px solid rgba(35, 43, 72, 0.9);
-      background: rgba(6,10,26,0.95);
+      border: 1px solid rgba(228, 196, 255, 0.9);
+      background: rgba(253, 245, 255, 0.95);
       color: var(--muted);
     }
 
@@ -401,12 +415,33 @@
       color: var(--accent);
     }
 
+    /* Pikachu background placeholder */
+    .pikachu-bg {
+      position: absolute;
+      right: -10px;
+      bottom: -10px;
+      width: 140px;
+      height: 140px;
+      opacity: 0.18;
+      z-index: 1;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      /* Replace this path with your own Pikachu artwork */
+      background-image: url("\\WSALTMA001\Folder Redirection\williamm\Desktop\025.png");
+      pointer-events: none;
+    }
+
     @media (max-width: 880px) {
       .hero {
-        grid-template-columns: minmax(0,1fr);
+        grid-template-columns: minmax(0, 1fr);
       }
       .hero-right {
         order: -1;
+      }
+      .pikachu-bg {
+        right: 10px;
+        bottom: -20px;
       }
     }
 
@@ -418,6 +453,7 @@
     .section-heading {
       font-size: 1.25rem;
       margin-bottom: 10px;
+      color: #3b134f;
     }
 
     .section-subtitle {
@@ -445,11 +481,13 @@
       border-radius: var(--radius-lg);
       padding: 14px 14px 16px;
       border: 1px solid var(--border);
+      box-shadow: 0 10px 25px rgba(173, 132, 221, 0.18);
     }
 
     .card h3 {
       font-size: 0.98rem;
       margin-bottom: 4px;
+      color: #3b134f;
     }
 
     .card p {
@@ -468,8 +506,9 @@
       font-size: 0.75rem;
       padding: 3px 8px;
       border-radius: 999px;
-      background: rgba(13,20,42,0.9);
+      background: #f9f0ff;
       color: var(--muted);
+      border: 1px solid #e4cffd;
     }
 
     .price-line {
@@ -513,15 +552,19 @@
     }
 
     .newsletter {
-      background: radial-gradient(circle at 0 0, rgba(255,79,216,0.2), transparent 60%), var(--card);
+      background:
+        radial-gradient(circle at 0 0, rgba(255, 176, 221, 0.5), transparent 60%),
+        var(--card);
       border-radius: var(--radius-lg);
-      border: 1px solid rgba(255, 79, 216, 0.35);
+      border: 1px solid rgba(255, 176, 221, 0.7);
       padding: 14px 14px 16px;
+      box-shadow: 0 10px 25px rgba(210, 141, 204, 0.25);
     }
 
     .newsletter h3 {
       font-size: 0.98rem;
       margin-bottom: 6px;
+      color: #3b134f;
     }
 
     .newsletter p {
@@ -540,8 +583,8 @@
       flex: 1 1 160px;
       padding: 8px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(164,172,199,0.6);
-      background: rgba(7,10,24,0.95);
+      border: 1px solid rgba(169, 138, 210, 0.9);
+      background: #fdf8ff;
       color: var(--text);
       font-size: 0.85rem;
     }
@@ -551,7 +594,7 @@
       border-radius: 999px;
       border: none;
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #050816;
+      color: #fff;
       font-size: 0.85rem;
       font-weight: 600;
       cursor: pointer;
@@ -560,7 +603,7 @@
     footer {
       margin-top: 32px;
       padding-top: 16px;
-      border-top: 1px solid rgba(38, 47, 79, 0.9);
+      border-top: 1px solid rgba(210, 184, 255, 0.8);
       font-size: 0.78rem;
       color: var(--muted);
       display: flex;
@@ -585,6 +628,7 @@
   <div class="nav-inner">
     <div class="nav-left">
       <div class="nav-logo">
+        <!-- Replace with your actual logo path -->
         <img src="/images/aurora-logo.png" alt="Aurora TCG Australia logo" />
       </div>
       <div class="brand-text">
@@ -609,6 +653,7 @@
 </header>
 
 <main class="page">
+  <!-- HERO -->
   <section class="hero">
     <div>
       <div class="hero-eyebrow">Australian Trading Card Store</div>
@@ -670,9 +715,13 @@
           <div><strong>QLD based</strong> • AU-wide shipping</div>
         </div>
       </aside>
+
+      <!-- Pikachu background placeholder -->
+      <div class="pikachu-bg" aria-hidden="true"></div>
     </div>
   </section>
 
+  <!-- SHOP OVERVIEW -->
   <section id="shop">
     <h2 class="section-heading">Shop Categories</h2>
     <p class="section-subtitle">
@@ -714,6 +763,7 @@
     </div>
   </section>
 
+  <!-- PREORDERS -->
   <section id="preorders">
     <h2 class="section-heading">Current & Upcoming Preorders</h2>
     <p class="section-subtitle">
@@ -752,6 +802,7 @@
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about">
     <h2 class="section-heading">About Aurora TCG Australia</h2>
     <p class="section-subtitle">
@@ -782,6 +833,7 @@
     </div>
   </section>
 
+  <!-- POLICIES -->
   <section id="policies">
     <h2 class="section-heading">Key Store Policies</h2>
     <p class="section-subtitle">
@@ -814,6 +866,7 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
     <h2 class="section-heading">Contact & Wholesale Enquiries</h2>
     <p class="section-subtitle">
@@ -827,7 +880,7 @@
           <li><strong>Location:</strong> Queensland, Australia</li>
           <li><strong>Email:</strong> <a href="mailto:hello@auroratcg.com.au">hello@auroratcg.com.au</a></li>
           <li><strong>Phone:</strong> 04xx xxx xxx</li>
-          <li><strong>ABN:</strong> [Your ABN here]</li>
+          <li><strong>ABN:</strong> 453 765 362</li>
         </ul>
         <p style="margin-top:10px;font-size:0.85rem;color:var(--muted);">
           Distributors and suppliers are welcome to contact us regarding ongoing ordering, allocations and promotional partnerships.
